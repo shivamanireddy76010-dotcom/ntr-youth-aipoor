@@ -1325,12 +1325,10 @@ renderVideos();
   align-items: center !important;
 }
 .countdown {
-  display: flex!important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, 78px) !important;
   justify-content: center !important;
   gap: 8px !important;
-  width: 100% !important;
 }
 .time-box {
   flex: 0 0 72px !important;
