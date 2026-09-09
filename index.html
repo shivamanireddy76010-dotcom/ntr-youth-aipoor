@@ -1318,10 +1318,25 @@ renderGallery();
 renderVideos();
 
 </script>
-  <style>
-.hero{display:flex !important;flex-direction:column !important;align-items:center !important;text-align:center !important}
-.countdown{display:flex !important;flex-direction:row !important;justify-content:center !important;gap:10px !important;margin:20px auto !important;width:100% !important;max-width:400px !important}
-.time-box{width:80px !important;min-width:75px !important}
+ <style>
+.hero {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.countdown {
+  display: flex!important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+.time-box {
+  flex: 0 0 72px !important;
+  width: 72px !important;
+  min-width: 72px !important;
+}
 </style>
 
 </body>
