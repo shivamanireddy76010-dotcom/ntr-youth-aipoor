@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NTR Youth Association Aipoor | Ganesh Festival</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#fffaf2;
+  color:#222;
+  line-height:1.6;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#7b1e00;
+  color:white;
+  padding:12px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 3px 12px rgba(0,0,0,.2);
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.om{
+  width:48px;
+  height:48px;
+  border:2px solid #ffd54f;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:29px;
+  color:#ffd54f;
+  font-weight:bold;
+}
+
+.logo-text h2{
+  font-size:19px;
+  color:#fff;
+}
+
+.logo-text p{
+  font-size:12px;
+  color:#ffd54f;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:18px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:#ffd54f;
+}
+
+.hero{
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+  background:
+  linear-gradient(rgba(80,20,0,.72),rgba(80,20,0,.72)),
+  url("https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  color:white;
+}
+
+.hero-content{
+  max-width:850px;
+}
+
+.hero h1{
+  font-size:45px;
+  margin-bottom:12px;
+}
+
+.hero h2{
+  color:#ffd54f;
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:18px;
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin:28px 0;
+}
+
+.time-box{
+  background:rgba(255,255,255,.15);
+  border:1px solid #ffd54f;
+  border-radius:12px;
+  padding:15px 20px;
+  min-width:90px;
+  backdrop-filter:blur(5px);
+}
+
+.time-box strong{
+  display:block;
+  font-size:28px;
+  color:#ffd54f;
+}
+
+.btn{
+  display:inline-block;
+  background:#ff9800;
+  color:white;
+  padding:12px 24px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+.btn:hover{
+  background:#e65100;
+}
+
+section{
+  padding:65px 7%;
+}
+
+.section-title{
+  text-align:center;
+  color:#7b1e00;
+  font-size:32px;
+  margin-bottom:35px;
+}
+
+.about{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  font-size:17px;
+}
+
+.president{
+  max-width:450px;
+  margin:0 auto 35px;
+  background:linear-gradient(135deg,#7b1e00,#b52b00);
+  color:white;
+  border-radius:18px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+.president .badge{
+  display:inline-block;
+  background:#ffd54f;
+  color:#7b1e00;
+  padding:5px 15px;
+  border-radius:20px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.president h3{
+  font-size:27px;
+}
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:18px;
+}
+
+.member{
+  background:white;
+  padding:22px 12px;
+  text-align:center;
+  border-radius:15px;
+  border:1px solid #f0d8c0;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+  transition:.2s;
+}
+
+.member:hover{
+  transform:translateY(-5px);
+}
+
+.member-icon{
+  width:58px;
+  height:58px;
+  margin:auto auto 10px;
+  border-radius:50%;
+  background:#ffe0b2;
+  color:#7b1e00;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  font-weight:bold;
+}
+
+.member h3{
+  font-size:16px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.videos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.video-card{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.contact-box{
+  max-width:700px;
+  margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
+
+.contact-item{
+  padding:12px 0;
+  border-bottom:1px solid #eee;
+}
+
+.contact-item:last-child{
+  border:none;
+}
+
+.contact-item a{
+  color:#7b1e00;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.admin{
+  background:#fff3e0;
+}
+
+.admin-box{
+  max-width:700px;
+  margin:auto;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+input,button{
+  width:100%;
+  padding:11px;
+  margin:7px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+button{
+  background:#7b1e00;
+  color:white;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+button:hover{
+  background:#b52b00;
+}
+
+.admin-list{
+  margin-top:20px;
+}
+
+.admin-item{
+  background:#fff8f0;
+  padding:12px;
+  margin:8px 0;
+  border-radius:8px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:center;
+}
+
+.delete{
+  width:auto;
+  padding:7px 12px;
+  background:#c62828;
+}
+
+footer{
+  background:#4a1200;
+  color:white;
+  text-align:center;
+  padding:25px;
+}
+
+@media(max-width:800px){
+  header{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+  }
+
+  nav a{
+    margin:3px 6px;
+    font-size:12px;
+  }
+
+  .hero h1{
+    font-size:31px;
+  }
+
+  .hero h2{
+    font-size:22px;
+  }
+
+  section{
+    padding:45px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-area">
+    <div class="om">ॐ</div>
+
+    <div class="logo-text">
+      <h2>NTR YOUTH ASSOCIATION AIPOOR</h2>
+      <p>Since 2015</p>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#team">Team</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#videos">Videos</a>
+    <a href="#contact">Contact</a>
+    <a href="#admin">Admin</a>
+  </nav>
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>🙏 NTR YOUTH ASSOCIATION AIPOOR 🙏</h1>
+
+    <h2>Ganesh Festival - September 14</h2>
+
+    <p>
+      Celebrating devotion, unity and friendship together.
+    </p>
+
+    <div class="countdown">
+
+      <div class="time-box">
+        <strong id="days">00</strong>
+        Days
+      </div>
+
+      <div class="time-box">
+        <strong id="hours">00</strong>
+        Hours
+      </div>
+
+      <div class="time-box">
+        <strong id="minutes">00</strong>
+        Minutes
+      </div>
+
+      <div class="time-box">
+        <strong id="seconds">00</strong>
+        Seconds
+      </div>
+
+    </div>
+
+    <a href="#contact" class="btn">Contact Us</a>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <h2 class="section-title">About Us</h2>
+
+  <div class="about">
+
+    <p>
+      Welcome to <b>NTR YOUTH ASSOCIATION AIPOOR</b>.
+      Our association was established in <b>2015</b>.
+      We come together every year to celebrate Ganesh Festival
+      with devotion, unity, happiness and community spirit.
+    </p>
+
+    <br>
+
+    <p>
+      Our youth members work together to organize festival activities
+      and create memorable moments for everyone in our community.
+    </p>
+
+    <br>
+
+    <p>
+      📍 <b>Location:</b> Aipoor, Telangana, Hyderabad – 508114
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- PRESIDENT -->
+
+<section id="team">
+
+  <h2 class="section-title">Our Team</h2>
+
+  <div class="president">
+
+    <span class="badge">PRESIDENT</span>
+
+    <h3>NARESH REDDY</h3>
+
+  </div>
+
+
+  <div class="team-grid" id="teamGrid">
+
+    <!-- Members will load here -->
+
+  </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+  <h2 class="section-title">Ganesh Festival Gallery</h2>
+
+  <div class="gallery" id="galleryGrid">
+
+    <img src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=900&q=80" alt="Ganesh Festival">
+
+    <img src="https://images.unsplash.com/photo-1567591414240-eed4ebe9a7b1?auto=format&fit=crop&w=900&q=80" alt="Festival">
+
+    <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80" alt="Celebration">
+
+  </div>
+
+</section>
+
+
+<!-- VIDEOS -->
+
+<section id="videos">
+
+  <h2 class="section-title">Festival Videos</h2>
+
+  <div class="videos" id="videoGrid">
+
+    <div class="video-card">
+      <h3>🎥 Festival Videos</h3>
+      <p>
+        Festival videos can be added through the Admin Panel.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <h2 class="section-title">Contact Us</h2>
+
+  <div class="contact-box">
+
+    <div class="contact-item">
+      👤 <b>President:</b> NARESH REDDY
+    </div>
+
+    <div class="contact-item">
+      📱 <b>Mobile:</b>
+      <a href="tel:7601093329">7601093329</a>
+    </div>
+
+    <div class="contact-item">
+      📧 <b>Email:</b>
+      <a href="mailto:ntryouth2015@gmail.com">
+        ntryouth2015@gmail.com
+      </a>
+    </div>
+
+    <div class="contact-item">
+      📍 <b>Location:</b>
+      Aipoor, Telangana, Hyderabad – 508114
+    </div>
+
+    <div style="text-align:center;margin-top:20px">
+
+      <a
+        class="btn"
+        href="https://www.google.com/maps/search/?api=1&query=Aipoor+Telangana+508114"
+        target="_blank">
+        📍 Open Location
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ADMIN -->
+
+<section class="admin" id="admin">
+
+  <h2 class="section-title">Admin Panel</h2>
+
+  <div class="admin-box">
+
+    <div id="loginBox">
+
+      <h3>🔐 Admin Login</h3>
+
+      <input
+        type="password"
+        id="adminPassword"
+        placeholder="Enter admin password">
+
+      <button onclick="login()">Login</button>
+
+      <p style="font-size:12px;margin-top:10px">
+        Demo password: <b>admin123</b>
+      </p>
+
+    </div>
+
+
+    <div id="adminPanel" style="display:none">
+
+      <h3>Manage Youth Members</h3>
+
+      <input
+        type="text"
+        id="memberName"
+        placeholder="Enter member name">
+
+      <button onclick="addMember()">
+        + Add Member
+      </button>
+
+      <div class="admin-list" id="memberAdminList"></div>
+
+
+      <hr style="margin:25px 0">
+
+
+      <h3>Manage Gallery Images</h3>
+
+      <input
+        type="text"
+        id="imageUrl"
+        placeholder="Paste image URL">
+
+      <button onclick="addImage()">
+        + Add Image
+      </button>
+
+      <div class="admin-list" id="imageAdminList"></div>
+
+
+      <hr style="margin:25px 0">
+
+
+      <h3>Manage Videos</h3>
+
+      <input
+        type="text"
+        id="videoUrl"
+        placeholder="Paste YouTube video URL">
+
+      <button onclick="addVideo()">
+        + Add Video
+      </button>
+
+      <div class="admin-list" id="videoAdminList"></div>
+
+
+      <button
+        onclick="logout()"
+        style="margin-top:25px;background:#555">
+        Logout
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    © 2026 NTR YOUTH ASSOCIATION AIPOOR
+  </p>
+
+  <p>
+    Established Since 2015 | Ganesh Festival 🙏
+  </p>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   GANESH FESTIVAL COUNTDOWN
+========================= */
+
+function updateCountdown(){
+
+  const now = new Date();
+
+  let year = now.getFullYear();
+
+  let target = new Date(
+    year,
+    8,
+    14,
+    0,
+    0,
+    0
+  );
+
+  if(now > target){
+
+    target = new Date(
+      year + 1,
+      8,
+      14,
+      0,
+      0,
+      0
+    );
+
+  }
+
+  const difference = target - now;
+
+  const days = Math.floor(
+    difference / (1000 * 60 * 60 * 24)
+  );
+
+  const hours = Math.floor(
+    (difference / (1000 * 60 * 60)) % 24
+  );
+
+  const minutes = Math.floor(
+    (difference / (1000 * 60)) % 60
+  );
+
+  const seconds = Math.floor(
+    (difference / 1000) % 60
+  );
+
+  document.getElementById("days").innerText =
+    String(days).padStart(2,"0");
+
+  document.getElementById("hours").innerText =
+    String(hours).padStart(2,"0");
+
+  document.getElementById("minutes").innerText =
+    String(minutes).padStart(2,"0");
+
+  document.getElementById("seconds").innerText =
+    String(seconds).padStart(2,"0");
+
+}
+
+setInterval(updateCountdown,1000);
+
+updateCountdown();
+
+
+/* =========================
+   DEFAULT MEMBERS
+========================= */
+
+const defaultMembers = [
+
+"MADHUSUDHANREDDY",
+"SHIVA BANDA",
+"RAJU",
+"NARESH",
+"RAM",
+"LAXMAN",
+"LINGASWAMY",
+"ABHI",
+"HARISH",
+"SHEKAR",
+"KIRAN",
+"MAHESH",
+"THARUN",
+"NAVEEN ANAMALLA",
+"VAMSHI",
+"NAVEEN",
+"DINESH",
+"SHANKAR",
+"P SHIVA",
+"SHIVA MANI",
+"PAVAN",
+"MANI",
+"GOWTHAM",
+"AKSHI",
+"YASHWANT",
+"CHIRANJEEVI"
+
+];
+
+
+/* =========================
+   LOCAL STORAGE
+========================= */
+
+let members =
+  JSON.parse(localStorage.getItem("ntrMembers"))
+  || defaultMembers;
+
+let images =
+  JSON.parse(localStorage.getItem("ntrImages"))
+  || [];
+
+let videos =
+  JSON.parse(localStorage.getItem("ntrVideos"))
+  || [];
+
+
+/* =========================
+   DISPLAY MEMBERS
+========================= */
+
+function renderMembers(){
+
+  const grid =
+    document.getElementById("teamGrid");
+
+  grid.innerHTML = "";
+
+  members.forEach((name,index)=>{
+
+    const firstLetter =
+      name.charAt(0).toUpperCase();
+
+    grid.innerHTML += `
+
+      <div class="member">
+
+        <div class="member-icon">
+          ${firstLetter}
+        </div>
+
+        <h3>${name}</h3>
+
+      </div>
+
+    `;
+
+  });
+
+  renderAdminMembers();
+
+}
+
+
+/* =========================
+   ADMIN MEMBER LIST
+========================= */
+
+function renderAdminMembers(){
+
+  const list =
+    document.getElementById("memberAdminList");
+
+  list.innerHTML = "";
+
+  members.forEach((name,index)=>{
+
+    list.innerHTML += `
+
+      <div class="admin-item">
+
+        <span>${name}</span>
+
+        <button
+          class="delete"
+          onclick="deleteMember(${index})">
+          Delete
+        </button>
+
+      </div>
+
+    `;
+
+  });
+
+}
+
+
+/* =========================
+   ADD MEMBER
+========================= */
+
+function addMember(){
+
+  const input =
+    document.getElementById("memberName");
+
+  const name =
+    input.value.trim();
+
+  if(!name){
+
+    alert("Please enter member name");
+
+    return;
+
+  }
+
+  members.push(name);
+
+  localStorage.setItem(
+    "ntrMembers",
+    JSON.stringify(members)
+  );
+
+  input.value = "";
+
+  renderMembers();
+
+}
+
+
+/* =========================
+   DELETE MEMBER
+========================= */
+
+function deleteMember(index){
+
+  if(confirm("Delete this member?")){
+
+    members.splice(index,1);
+
+    localStorage.setItem(
+      "ntrMembers",
+      JSON.stringify(members)
+    );
+
+    renderMembers();
+
+  }
+
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+function renderImages(){
+
+  const grid =
+    document.getElementById("galleryGrid");
+
+  const list =
+    document.getElementById("imageAdminList");
+
+  list.innerHTML = "";
+
+  if(images.length === 0){
+
+    list.innerHTML =
+      "<p>No additional images added.</p>";
+
+  }
+
+  images.forEach((url,index)=>{
+
+    grid.innerHTML += `
+
+      <img
+        src="${url}"
+        alt="Festival Image">
+
+    `;
+
+    list.innerHTML += `
+
+      <div class="admin-item">
+
+        <span>Image ${index+1}</span>
+
+        <button
+          class="delete"
+          onclick="deleteImage(${index})">
+          Delete
+        </button>
+
+      </div>
+
+    `;
+
+  });
+
+}
+
+
+/* =========================
+   ADD IMAGE
+========================= */
+
+function addImage(){
+
+  const input =
+    document.getElementById("imageUrl");
+
+  const url =
+    input.value.trim();
+
+  if(!url){
+
+    alert("Please enter image URL");
+
+    return;
+
+  }
+
+  images.push(url);
+
+  localStorage.setItem(
+    "ntrImages",
+    JSON.stringify(images)
+  );
+
+  input.value = "";
+
+  renderGallery();
+
+}
+
+
+/* =========================
+   DELETE IMAGE
+========================= */
+
+function deleteImage(index){
+
+  images.splice(index,1);
+
+  localStorage.setItem(
+    "ntrImages",
+    JSON.stringify(images)
+  );
+
+  renderGallery();
+
+}
+
+
+/* =========================
+   RENDER GALLERY
+========================= */
+
+function renderGallery(){
+
+  const grid =
+    document.getElementById("galleryGrid");
+
+  grid.innerHTML = `
+
+    <img
+      src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=900&q=80"
+      alt="Ganesh Festival">
+
+    <img
+      src="https://images.unsplash.com/photo-1567591414240-eed4ebe9a7b1?auto=format&fit=crop&w=900&q=80"
+      alt="Festival">
+
+    <img
+      src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80"
+      alt="Celebration">
+
+  `;
+
+  images.forEach(url=>{
+
+    grid.innerHTML += `
+
+      <img
+        src="${url}"
+        alt="NTR Youth Festival">
+
+    `;
+
+  });
+
+  renderImageAdmin();
+
+}
+
+
+function renderImageAdmin(){
+
+  const list =
+    document.getElementById("imageAdminList");
+
+  list.innerHTML = "";
+
+  images.forEach((url,index)=>{
+
+    list.innerHTML += `
+
+      <div class="admin-item">
+
+        <span>Image ${index+1}</span>
+
+        <button
+          class="delete"
+          onclick="deleteImage(${index})">
+          Delete
+        </button>
+
+      </div>
+
+    `;
+
+  });
+
+}
+
+
+/* =========================
+   VIDEOS
+========================= */
+
+function renderVideos(){
+
+  const grid =
+    document.getElementById("videoGrid");
+
+  const list =
+    document.getElementById("videoAdminList");
+
+  grid.innerHTML = "";
+
+  list.innerHTML = "";
+
+  if(videos.length === 0){
+
+    grid.innerHTML = `
+
+      <div class="video-card">
+
+        <h3>🎥 Festival Videos</h3>
+
+        <p>
+          Festival videos can be added
+          through the Admin Panel.
+        </p>
+
+      </div>
+
+    `;
+
+  }
+
+
+  videos.forEach((url,index)=>{
+
+    let embedUrl = url;
+
+    if(url.includes("watch?v=")){
+
+      embedUrl =
+        url.replace(
+          "watch?v=",
+          "embed/"
+        );
+
+    }
+
+    if(url.includes("youtu.be/")){
+
+      embedUrl =
+        url.replace(
+          "youtu.be/",
+          "www.youtube.com/embed/"
+        );
+
+    }
+
+    grid.innerHTML += `
+
+      <div class="video-card">
+
+        <iframe
+          width="100%"
+          height="220"
+          src="${embedUrl}"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+    `;
+
+
+    list.innerHTML += `
+
+      <div class="admin-item">
+
+        <span>Video ${index+1}</span>
+
+        <button
+          class="delete"
+          onclick="deleteVideo(${index})">
+          Delete
+        </button>
+
+      </div>
+
+    `;
+
+  });
+
+}
+
+
+/* =========================
+   ADD VIDEO
+========================= */
+
+function addVideo(){
+
+  const input =
+    document.getElementById("videoUrl");
+
+  const url =
+    input.value.trim();
+
+  if(!url){
+
+    alert("Please enter YouTube URL");
+
+    return;
+
+  }
+
+  videos.push(url);
+
+  localStorage.setItem(
+    "ntrVideos",
+    JSON.stringify(videos)
+  );
+
+  input.value = "";
+
+  renderVideos();
+
+}
+
+
+/* =========================
+   DELETE VIDEO
+========================= */
+
+function deleteVideo(index){
+
+  videos.splice(index,1);
+
+  localStorage.setItem(
+    "ntrVideos",
+    JSON.stringify(videos)
+  );
+
+  renderVideos();
+
+}
+
+
+/* =========================
+   ADMIN LOGIN
+========================= */
+
+function login(){
+
+  const password =
+    document.getElementById("adminPassword").value;
+
+  if(password === "admin123"){
+
+    document.getElementById("loginBox")
+      .style.display = "none";
+
+    document.getElementById("adminPanel")
+      .style.display = "block";
+
+  }else{
+
+    alert("Wrong password");
+
+  }
+
+}
+
+
+function logout(){
+
+  document.getElementById("loginBox")
+    .style.display = "block";
+
+  document.getElementById("adminPanel")
+    .style.display = "none";
+
+  document.getElementById("adminPassword")
+    .value = "";
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+renderMembers();
+renderGallery();
+renderVideos();
+
+</script>
+
+</body>
+</html>
