@@ -674,7 +674,7 @@ footer{
 <footer>
 
   <p>
-    © 2026 NTR YOUTH ASSOCIATION AIPOOR
+    © <span id="year"></span> NTR YOUTH ASSOCIATION AIPOOR
   </p>
 
   <p>
@@ -685,7 +685,7 @@ footer{
 
 
 <script>
-
+document.getElementById("year").textContent=new Date().getFullYear();
 /* =========================
    GANESH FESTIVAL COUNTDOWN
 ========================= */
