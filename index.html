@@ -692,18 +692,24 @@ document.getElementById("year").textContent=new Date().getFullYear();
 
 function updateCountdown(){
 
-  const now = new Date();
+ const now = new Date();
+
+  const ganeshDates = {
+    2026: "2026-09-14T00:00:00",
+    2027: "2027-09-04T00:00:00",
+    2028: "2028-08-23T00:00:00",
+    2029: "2029-09-11T00:00:00",
+    2030: "2030-09-01T00:00:00",
+    2031: "2031-09-20T00:00:00"
+  };
 
   let year = now.getFullYear();
+  let target = new Date(ganeshDates[year] || (year+"-09-14T00:00:00"));
 
-  let target = new Date(
-    year,
-    8,
-    14,
-    0,
-    0,
-    0
-  );
+  if (now > target) {
+    year = year + 1;
+    target = new Date(ganeshDates[year] || (year+"-09-14T00:00:00"));
+  }
 
   if(now > target){
 
